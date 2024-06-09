@@ -1,9 +1,8 @@
 package com.example.identity_service.controller;
 
-import com.example.identity_service.dto.UserCreationRequest;
-import com.example.identity_service.dto.UserResponse;
-import com.example.identity_service.dto.UserUpdateRequest;
-import com.example.identity_service.entity.User;
+import com.example.identity_service.dto.request.UserCreationRequest;
+import com.example.identity_service.dto.request.UserUpdateRequest;
+import com.example.identity_service.dto.response.UserResponse;
 import com.example.identity_service.exception.ApiResponse;
 import com.example.identity_service.service.UserService;
 import jakarta.validation.Valid;
