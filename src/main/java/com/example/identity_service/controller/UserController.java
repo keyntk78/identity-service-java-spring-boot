@@ -60,4 +60,11 @@ public class UserController {
 
         return apiResponse;
     }
+
+    @GetMapping("/profile")
+    ApiResponse<UserResponse> getProfile(){
+        return ApiResponse.<UserResponse>builder()
+                .result(userService.getProfile())
+                .build();
+    }
 }
