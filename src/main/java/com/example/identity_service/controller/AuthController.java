@@ -21,11 +21,9 @@ public class AuthController {
     AuthService authService;
     @PostMapping("/login")
     ApiResponse<LoginRespone> authenticate(@RequestBody LoginRequest request){
-        boolean result = authService.authenticate(request);
+        LoginRespone result = authService.authenticate(request);
         return ApiResponse.<LoginRespone>builder()
-                .result(LoginRespone.builder()
-                        .authenticated(result)
-                        .build())
+                .result(result)
                 .build();
     }
 }
